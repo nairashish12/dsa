@@ -25,7 +25,7 @@ let memoArr = new Array(n+1).fill(-1)
 console.log(climbStairs(n, memoArr))
 
 //fibonacci(n+1)
-function climbStairs(n) {
+function climbStairs(n, memoArr) {
     // console.log(n)
     if(n < 2) {
         // We are using 1 instead of n because fibonacci of 2 gives 1 but we want 2

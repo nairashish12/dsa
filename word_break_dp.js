@@ -7,7 +7,7 @@ console.log(getOccurence())
 function getOccurence() {
 	let check = false
 
-	for (let i = 1; i <= word.length; i++) {
+	for (let i = 0; i <= word.length; i++) {
 		for (let j = 0; j < i; j++) {
 			if(words.indexOf(word.substring(j, i)) > -1) {
 			// 	check = false

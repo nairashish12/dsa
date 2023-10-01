@@ -1,4 +1,5 @@
 let coins = [2, 5, 3, 6]
+//22222 253 3322 622 55
 let sum = 10
 console.log(count(coins, coins.length, sum))
 
@@ -8,20 +9,22 @@ console.log(count(coins, coins.length, sum))
 //If I dont pick a coin then I will take the last coin out of my coin options so it will now become [1,2] & therefore the length would reduce to 2 but the sum would remain the same which is 10 since I didnt pick any coins
 //This function will run recursively till either the length is 0 which is when we will return 0 or if the sum is 0 then it means it took only 1 combination to get the sum. If the sum happens to be less than 0 then just return 0
 
+//sum == 0 return 1 because if sum == 0 has been reached it means atleast 1 combination has been met
 function count(coins, length, sum) {
-	if(sum == 0) {
-		return 1
-	}
-
-	if(sum < 1) {
-		return 0
-	}
 
 	if(length == 0) {
 		return 0
 	}
+    
+	if(sum == 0) {
+		return 1
+	}
 
-	return count(coins, length, sum-coins[length-1]) + count(coins, length-1, sum)
+	if(sum < 0) {
+		return 0
+	}
+
+	return count(coins, length, sum-coins[length-1]) + count(coins.slice(0, length-1), length-1, sum)
 }
 
 // Time Complexity: O(2sum)

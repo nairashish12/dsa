@@ -20,5 +20,20 @@ function minTrials(n, k) {
     return no_of_trials
 }
 
+// function minTrials(n, k) {
+//     let no_of_trials = 0;
+//     let trials = new Array(n).fill(0);
+
+//     while (trials[n - 1] < k) {
+//         no_of_trials++;
+//         for (let x = n - 1; x > 0; x--) {
+//             trials[x] += 1 + trials[x - 1];
+//         }
+//     }
+
+//     return no_of_trials;
+// }
+
+
 // Time Complexity: O(N * log K)
 // Auxiliary Space: O(N)
