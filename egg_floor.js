@@ -20,6 +20,16 @@ function minTrials(n, k) {
     return no_of_trials
 }
 
+//answer = 4
+
+// [0, 1, 1] so for 2 eggs this is my 1st try
+// [0, 2, 3] now that I have the data from the 1st try I dont need to go through it again. This is my 2nd try
+// [0, 3, 6]
+// [0, 4, 10]
+
+//in this 0 denotes no of tries needed for 0 eggs, 4 needed for 1 egg & 10 needed for 2 eggs
+
+
 // function minTrials(n, k) {
 //     let no_of_trials = 0;
 //     let trials = new Array(n).fill(0);
